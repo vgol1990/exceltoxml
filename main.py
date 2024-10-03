@@ -38,6 +38,7 @@ def convert_excel_to_xml(file_path):
         promo_elem = ET.SubElement(product_elem, 'Promo')
         promo_elem.text = str(row['Новинка/акция'])
 
+
     # Записываем результат в файл
     tree = ET.ElementTree(root)
     tree.write('output_products.xml', encoding='utf-8', xml_declaration=True)
