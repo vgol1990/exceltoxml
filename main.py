@@ -22,14 +22,14 @@ def convert_excel_to_xml(file_path):
         category_elem = ET.SubElement(product_elem, 'Category')
         category_elem.text = str(row['Категория'])
         
-        # Добавляем название
+        # # Добавляем название
         name_elem = ET.SubElement(product_elem, 'Name')
-        name_elem.text = str(row['Назание'])
+        name_elem.text = str(row['Название'])
         
         # Добавляем фото
         photo_elem = ET.SubElement(product_elem, 'Photo')
         photo_elem.text = str(row['фото'])
-        print(photo_elem.text +'\n')
+        #print(photo_elem.text +'\n')
         # Добавляем цену
         price_elem = ET.SubElement(product_elem, 'Price')
         price_elem.text = str(row['цена'])
